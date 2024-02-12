@@ -1,6 +1,6 @@
 import CardHeader from "./CardHeader";
 import Form from "./Form";
-import Button from "./Button";
+import Button from "../Button";
 
 function Card({ cardData }) {
   return (
