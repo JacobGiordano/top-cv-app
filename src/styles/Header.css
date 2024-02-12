@@ -1,0 +1,5 @@
+.header {
+  display: flex;
+  background: lightblue;
+  padding: 1rem;
+}
