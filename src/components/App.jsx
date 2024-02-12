@@ -1,6 +1,4 @@
 import "../styles/App.css";
-import "../assets/sample-data.js";
-import "../assets/stored-data.js";
 
 import Column from "./Column";
 import Header from "./Header";
@@ -9,7 +7,7 @@ import Button from "./Button";
 import Logo from "./Logo";
 import Section from "./Section";
 import SectionHeader from "./SectionHeader";
-import sampleData from "../assets/sample-data.js";
+import Preview from "./Preview/Preview.jsx";
 
 function App() {
   return (
@@ -39,7 +37,9 @@ function App() {
             <SectionHeader text='Skills' buttonText='+' />
           </Section>
         </Column>
-        <Column></Column>
+        <Column>
+          <Preview />
+        </Column>
       </Main>
     </>
   );
