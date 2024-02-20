@@ -10,26 +10,6 @@ const sampleData = {
       location: "Anywhere and everywhere",
     }
   ],
-  education: [
-    {
-      id: uuidv4(),
-      name: "School",
-      degree_certification: "Certificate",
-      area_of_focus: "Something cool",
-      start_date: "Jan 1, 20xx",
-      end_date: "Dec 31, 20xx",
-      location: "Someplace",
-    },
-    {
-      id: uuidv4(),
-      name: "School 2",
-      degree_certification: "Certificate 2",
-      area_of_focus: "Something cool 2",
-      start_date: "Jan 1, 20xx 2",
-      end_date: "Dec 31, 20xx 2",
-      location: "Someplace 2",
-    },
-  ],
   experience: [
     {
       id: uuidv4(),
@@ -59,10 +39,30 @@ const sampleData = {
       location: "Someplace 3",
     },
   ],
+  education: [
+    {
+      id: uuidv4(),
+      name: "School",
+      degree_certification: "Certificate",
+      area_of_focus: "Something cool",
+      start_date: "Jan 1, 20xx",
+      end_date: "Dec 31, 20xx",
+      location: "Someplace",
+    },
+    {
+      id: uuidv4(),
+      name: "School 2",
+      degree_certification: "Certificate 2",
+      area_of_focus: "Something cool 2",
+      start_date: "Jan 1, 20xx 2",
+      end_date: "Dec 31, 20xx 2",
+      location: "Someplace 2",
+    },
+  ],
   skills: [
     {
       id: uuidv4(),
-      skill: "Numbchuck skillz",
+      skill: "Bo staff skillz",
     },
   ],
 };
