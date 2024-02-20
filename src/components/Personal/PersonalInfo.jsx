@@ -1,5 +1,4 @@
 function PersonalInfoCard({ appData, updateData, sectionName }) {
-  const data = appData;
   const handleChange = (e, cardId) => {
     const formData = new FormData(e.target.closest("form"));
     formData.set("id", cardId);
@@ -7,7 +6,7 @@ function PersonalInfoCard({ appData, updateData, sectionName }) {
     updateData(sectionName, newCardObj);
   };
 
-  const cards = data[sectionName].map((card) => {
+  const cards = appData[sectionName].map((card) => {
     return (
       <form key={card.id} action='' method='post'>
         <div className='input-group'>
