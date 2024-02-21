@@ -1,4 +1,4 @@
-function PersonalInfoCard({ appData, updateData, sectionName }) {
+function PersonalInfoCard({ appData, updateData, addData, removeData, sectionName }) {
   const handleChange = (e, cardId) => {
     const formData = new FormData(e.target.closest("form"));
     formData.set("id", cardId);

@@ -9,7 +9,6 @@ import Logo from "./Logo";
 import Preview from "./Preview/Preview.jsx";
 import { useState } from "react";
 
-import { v4 as uuidv4 } from "uuid";
 import PersonalInfo from "./Personal/PersonalInfo.jsx";
 import Experience from "./Experience/Experience.jsx";
 import Education from "./Education/Education.jsx";
@@ -25,6 +24,19 @@ function App() {
     setAppData({ ...appData, [section]: newSectionData });
   };
 
+  const addData = (section, newCardObj) => {
+    const newSectionData = appData[section];
+    newSectionData.push(newCardObj);
+    setAppData({ ...appData, [section]: newSectionData });
+  };
+
+  const removeData = (section, cardId) => {
+    const newSectionData = appData[section].filter((card) => {
+      return card.id !== cardId ? card : null;
+    });
+    setAppData({ ...appData, [section]: newSectionData });
+  }
+
   return (
     <>
       <Header>
@@ -33,7 +45,7 @@ function App() {
           <h1>App name</h1>
         </Column>
         <Column>
-          <Button text='Clear' />
+          <Button text='Clear' onClick={() => alert("HELLO!")}/>
           <Button text='Load Example' />
         </Column>
       </Header>
@@ -47,16 +59,22 @@ function App() {
           <Experience
             appData={appData}
             updateData={updateData}
+            addData={addData}
+            removeData={removeData}
             sectionName='experience'
           />
           <Education
             appData={appData}
             updateData={updateData}
+            addData={addData}
+            removeData={removeData}
             sectionName='education'
           />
           <Skills
             appData={appData}
             updateData={updateData}
+            addData={addData}
+            removeData={removeData}
             sectionName='skills'
           />
         </Column>
