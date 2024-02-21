@@ -11,6 +11,9 @@ import { useState } from "react";
 
 import { v4 as uuidv4 } from "uuid";
 import PersonalInfo from "./Personal/PersonalInfo.jsx";
+import Experience from "./Experience/Experience.jsx";
+import Education from "./Education/Education.jsx";
+import Skills from "./Education/Skills.jsx";
 
 function App() {
   const [appData, setAppData] = useState(sampleData);
@@ -40,7 +43,22 @@ function App() {
             appData={appData}
             updateData={updateData}
             sectionName='personal'
-          ></PersonalInfo>
+          />
+          <Experience
+            appData={appData}
+            updateData={updateData}
+            sectionName='experience'
+          />
+          <Education
+            appData={appData}
+            updateData={updateData}
+            sectionName='education'
+          />
+          <Skills
+            appData={appData}
+            updateData={updateData}
+            sectionName='skills'
+          />
         </Column>
         <Column>
           <Preview appData={appData} />
