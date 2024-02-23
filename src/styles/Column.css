@@ -1,5 +1,35 @@
 .column {
-  border: 1px solid lightgray;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  gap: 1rem;
+}
+
+.column-row { 
+  flex-direction: row;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.column-left {
+  grid-area: column-left;
+}
+
+.column-right {
+  grid-area: column-right;
+}
+
+@media screen and (min-width: 980px) {
+  .column-right {
+    min-height: 100vh;
+    position: fixed;
+    top: 6rem;
+    min-height: 100vh;
+  }
 }

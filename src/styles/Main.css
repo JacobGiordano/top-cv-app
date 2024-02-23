@@ -1,5 +1,17 @@
 .main {
-  display: flex;
-  width: 100%;
-  padding: 0;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.main.grid {
+  grid-template-areas: "column-left"
+                       "column-right";
+}
+
+@media screen and (min-width: 980px) {
+  .main.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "column-left column-right column-right";
+    top: 4.5rem;
+  }
 }
