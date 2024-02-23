@@ -1,4 +1,4 @@
-import "../styles/Column.css"
+// import "../styles/Column.css"
 
 function Column({children}) {
   return (

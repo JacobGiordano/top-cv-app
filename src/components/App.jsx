@@ -1,4 +1,4 @@
-import "../styles/App.css";
+// import "../styles/App.css";
 import sampleData from "../assets/sample-data.js";
 
 import Column from "./Column";
@@ -12,7 +12,7 @@ import { useState } from "react";
 import PersonalInfo from "./Personal/PersonalInfo.jsx";
 import Experience from "./Experience/Experience.jsx";
 import Education from "./Education/Education.jsx";
-import Skills from "./Education/Skills.jsx";
+import Skills from "./Skills/Skills.jsx";
 
 function App() {
   const [appData, setAppData] = useState(sampleData);
