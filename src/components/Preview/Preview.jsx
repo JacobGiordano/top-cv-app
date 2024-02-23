@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import "../../styles/Preview.css";
 
 function Preview({ appData }) {
   const data = appData;

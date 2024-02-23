@@ -1,5 +1,13 @@
 .header {
   display: flex;
-  background: lightblue;
+  position: fixed;
+  background: #2d2d2d;
+  width: 100%;
   padding: 1rem;
+  left: 0;
+  z-index: 20;
+}
+.header h1.app-title {
+  display: inline-block;
+  margin: 0;
 }

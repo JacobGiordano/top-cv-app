@@ -1,4 +1,4 @@
-// import "../styles/App.css";
+import "../styles/App.css";
 import sampleData from "../assets/sample-data.js";
 
 import Column from "./Column";
@@ -38,19 +38,19 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Header>
-        <Column>
+        <Column classes="column column-row justify-start">
           <Logo />
-          <h1>App name</h1>
+          <h1 className="app-title">App name</h1>
         </Column>
-        <Column>
+        <Column classes="column column-row justify-end">
           <Button text='Clear' onClick={() => alert("HELLO!")}/>
           <Button text='Load Example' />
         </Column>
       </Header>
       <Main>
-        <Column>
+        <Column classes="column column-left">
           <PersonalInfo
             appData={appData}
             updateData={updateData}
@@ -78,11 +78,11 @@ function App() {
             sectionName='skills'
           />
         </Column>
-        <Column>
+        <Column classes="column column-right">
           <Preview appData={appData} />
         </Column>
       </Main>
-    </>
+    </div>
   );
 }
 
