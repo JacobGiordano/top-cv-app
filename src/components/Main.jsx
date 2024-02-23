@@ -1,8 +1,8 @@
-import "../styles/Main.css"
+// import "../styles/Main.css"
 
 function Main({children}) {
   return (
-    <main className="main">{children}</main>
+    <main className="main grid">{children}</main>
   )
 }
 export default Main

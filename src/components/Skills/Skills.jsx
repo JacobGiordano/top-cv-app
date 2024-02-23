@@ -47,8 +47,11 @@ function Skills({ appData, updateData, addData, removeData, sectionName }) {
   return (
     <div className='section'>
       <h2>Skills</h2>
-      {cards}
-      <Button text='+' onClick={handleAddData} />
+      <details>
+        <summary role='button'>View more</summary>
+        {cards}
+        <Button text='+' onClick={handleAddData} />
+      </details>
     </div>
   );
 }

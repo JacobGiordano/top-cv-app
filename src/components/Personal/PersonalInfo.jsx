@@ -1,4 +1,10 @@
-function PersonalInfoCard({ appData, updateData, addData, removeData, sectionName }) {
+function PersonalInfoCard({
+  appData,
+  updateData,
+  addData,
+  removeData,
+  sectionName,
+}) {
   const handleChange = (e, cardId) => {
     const formData = new FormData(e.target.closest("form"));
     formData.set("id", cardId);
@@ -8,48 +14,51 @@ function PersonalInfoCard({ appData, updateData, addData, removeData, sectionNam
 
   const cards = appData[sectionName].map((card) => {
     return (
-      <form key={card.id} action='' method='post'>
-        <div className='input-group'>
-          <label htmlFor='name'>Full Name</label>
-          <input
-            type='text'
-            id='name'
-            name='name'
-            value={card.name}
-            onChange={(e) => handleChange(e, card.id)}
-          />
-        </div>
-        <div className='input-group'>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            value={card.email}
-            onChange={(e) => handleChange(e, card.id)}
-          />
-        </div>
-        <div className='input-group'>
-          <label htmlFor='phone'>Phone</label>
-          <input
-            type='tel'
-            id='phone'
-            name='phone'
-            value={card.phone}
-            onChange={(e) => handleChange(e, card.id)}
-          />
-        </div>
-        <div className='input-group'>
-          <label htmlFor='location'>Location</label>
-          <input
-            type='text'
-            id='location'
-            name='location'
-            value={card.location}
-            onChange={(e) => handleChange(e, card.id)}
-          />
-        </div>
-      </form>
+      <details key={card.id}>
+        <summary role='button'>{card.name}</summary>
+        <form action='' method='post'>
+          <div className='input-group'>
+            <label htmlFor='name'>Full Name</label>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              value={card.name}
+              onChange={(e) => handleChange(e, card.id)}
+            />
+          </div>
+          <div className='input-group'>
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              value={card.email}
+              onChange={(e) => handleChange(e, card.id)}
+            />
+          </div>
+          <div className='input-group'>
+            <label htmlFor='phone'>Phone</label>
+            <input
+              type='tel'
+              id='phone'
+              name='phone'
+              value={card.phone}
+              onChange={(e) => handleChange(e, card.id)}
+            />
+          </div>
+          <div className='input-group'>
+            <label htmlFor='location'>Location</label>
+            <input
+              type='text'
+              id='location'
+              name='location'
+              value={card.location}
+              onChange={(e) => handleChange(e, card.id)}
+            />
+          </div>
+        </form>
+      </details>
     );
   });
   return (
