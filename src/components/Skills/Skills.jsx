@@ -46,9 +46,8 @@ function Skills({ appData, updateData, addData, removeData, sectionName }) {
   });
   return (
     <div className='section'>
-      <h2>Skills</h2>
-      <details>
-        <summary role='button'>View more</summary>
+      <details className='section-header'>
+        <summary role='button' className="outline secondary"><h2>Skills</h2></summary>
         {cards}
         <Button text='+' onClick={handleAddData} />
       </details>
