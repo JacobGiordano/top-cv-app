@@ -1,4 +1,6 @@
 import "../styles/App.css";
+import "../styles/global.css";
+
 import sampleData from "../assets/sample-data.js";
 
 import Column from "./Column";
