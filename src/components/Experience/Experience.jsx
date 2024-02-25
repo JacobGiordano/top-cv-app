@@ -1,4 +1,5 @@
 import Button from "../Button";
+import TrashCan from "../icons/TrashCan";
 import { v4 as uuidv4 } from "uuid";
 
 function Experience({ appData, updateData, addData, removeData, sectionName }) {
@@ -32,14 +33,18 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
       <details key={card.id}>
         <summary role='button'>{card.name}</summary>
         <form action='' method='post'>
-          <div className='delete-btn-wrapper'>
-            <Button
-              text='&times;'
-              onClick={(e) => handleRemoveData(e, sectionName, card.id)}
-            />
-          </div>
           <div className='input-group'>
-            <label htmlFor={`name_${card.id}`}>Name</label>
+            <div className='grid'>
+              <label htmlFor={`name_${card.id}`}>Name</label>
+              <div className='delete-btn-wrapper'>
+                <Button
+                  text='Delete'
+                  onClick={(e) => handleRemoveData(e, sectionName, card.id)}
+                >
+                  <TrashCan />
+                </Button>
+              </div>
+            </div>
             <input
               type='text'
               id={`name_${card.id}`}
@@ -102,14 +107,18 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
       </details>
     ) : (
       <form key={card.id} action='' method='post'>
-        <div className='delete-btn-wrapper'>
-          <Button
-            text='&times;'
-            onClick={(e) => handleRemoveData(e, sectionName, card.id)}
-          />
-        </div>
         <div className='input-group'>
-          <label htmlFor={`name_${card.id}`}>Name</label>
+          <div className='grid'>
+            <label htmlFor={`name_${card.id}`}>Name</label>
+            <div className='delete-btn-wrapper'>
+              <Button
+                text='Delete'
+                onClick={(e) => handleRemoveData(e, sectionName, card.id)}
+              >
+                <TrashCan />
+              </Button>
+            </div>
+          </div>
           <input
             type='text'
             id={`name_${card.id}`}
@@ -174,9 +183,11 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
   return (
     <div className='section'>
       <details className='section-header'>
-      <summary role='button' className="outline secondary"><h2>Experience</h2></summary>
-      {cards}
-      <Button text='+' onClick={handleAddData} />
+        <summary role='button' className='outline secondary'>
+          <h2>Experience</h2>
+        </summary>
+        {cards}
+        <Button text='+' onClick={handleAddData} />
       </details>
     </div>
   );

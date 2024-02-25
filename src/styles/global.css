@@ -9,3 +9,17 @@ details summary.outline.secondary::after {
 details[open] summary.outline.secondary::after {
   transform: translateY(-32px);
 }
+
+.delete-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.delete-btn-wrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .25rem ;
+}
