@@ -1,5 +1,6 @@
 import Button from "../Button";
 import { v4 as uuidv4 } from "uuid";
+import TrashCan from "../icons/TrashCan";
 
 function Education({ appData, updateData, addData, removeData, sectionName }) {
   const handleChange = (e, cardId) => {
@@ -29,17 +30,21 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
 
   const cards = appData[sectionName].map((card) => {
     return appData[sectionName].length > 1 ? (
-      <details key={card.id}>
+      <details key={card.id} className='outline'>
         <summary role='button'>{card.name}</summary>
         <form action='' method='post'>
-          <div className='delete-btn-wrapper'>
-            <Button
-              text='&times;'
-              onClick={(e) => handleRemoveData(e, sectionName, card.id)}
-            />
-          </div>
           <div className='input-group'>
-            <label htmlFor={`name_${card.id}`}>Name</label>
+            <div className='grid'>
+              <label htmlFor={`name_${card.id}`}>Name</label>
+              <div className='delete-btn-wrapper'>
+                <Button
+                  text='Delete'
+                  onClick={(e) => handleRemoveData(e, sectionName, card.id)}
+                >
+                  <TrashCan />
+                </Button>
+              </div>
+            </div>
             <input
               type='text'
               id={`name_${card.id}`}
@@ -104,14 +109,18 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
       </details>
     ) : (
       <form key={card.id} action='' method='post'>
-        <div className='delete-btn-wrapper'>
-          <Button
-            text='&times;'
-            onClick={(e) => handleRemoveData(e, sectionName, card.id)}
-          />
-        </div>
         <div className='input-group'>
-          <label htmlFor={`name_${card.id}`}>Name</label>
+          <div className='grid'>
+            <label htmlFor={`name_${card.id}`}>Name</label>
+            <div className='delete-btn-wrapper'>
+              <Button
+                text='Delete'
+                onClick={(e) => handleRemoveData(e, sectionName, card.id)}
+              >
+                <TrashCan />
+              </Button>
+            </div>
+          </div>
           <input
             type='text'
             id={`name_${card.id}`}

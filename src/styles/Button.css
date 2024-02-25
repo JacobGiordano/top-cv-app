@@ -1,0 +1,6 @@
+button svg {
+  width: 100%;
+  height: auto;
+  max-width: 1rem;
+  stroke: var(--pico-form-element-color);
+}
