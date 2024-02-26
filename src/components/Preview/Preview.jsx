@@ -9,7 +9,7 @@ function Preview({ appData }) {
   const skills = data.skills;
   return (
     <div className='preview-wrapper grid'>
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='personal-info'>
           <h3>Personal Info</h3>
           <h4>{personal.name}</h4>
@@ -43,7 +43,7 @@ function Preview({ appData }) {
           })}
         </div>
       </div>
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='experience'>
           <h3>Experience</h3>
           {experience.map((exp) => {

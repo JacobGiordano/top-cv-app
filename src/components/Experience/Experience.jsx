@@ -32,10 +32,10 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
     return appData[sectionName].length > 1 ? (
       <details key={card.id}>
         <summary role='button'>{card.name}</summary>
-        <form action='' method='post'>
+        <form className="outline" action='' method='post'>
           <div className='input-group'>
             <div className='grid'>
-              <label htmlFor={`name_${card.id}`}>Name</label>
+              <label htmlFor={`name_${card.id}`}>Experience Name</label>
               <div className='delete-btn-wrapper'>
                 <Button
                   text='Delete'
@@ -106,7 +106,7 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
         </form>
       </details>
     ) : (
-      <form key={card.id} action='' method='post'>
+      <form className="outline" key={card.id} action='' method='post'>
         <div className='input-group'>
           <div className='grid'>
             <label htmlFor={`name_${card.id}`}>Name</label>
@@ -187,7 +187,9 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
           <h2>Experience</h2>
         </summary>
         {cards}
-        <Button text='+' onClick={handleAddData} />
+        <div className="add-card-wrapper">
+          <Button text='Add experience' onClick={handleAddData} />
+        </div>
       </details>
     </div>
   );

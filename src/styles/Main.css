@@ -1,6 +1,7 @@
 .main {
   padding-top: 1rem;
   position: relative;
+  height: 100vh;
 }
 
 .main.grid {
@@ -10,8 +11,8 @@
 
 @media screen and (min-width: 980px) {
   .main.grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "column-left column-right column-right";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "column-left column-left column-right column-right column-right";
     top: 4.5rem;
   }
 }

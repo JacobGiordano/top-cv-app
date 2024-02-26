@@ -14,7 +14,7 @@ function PersonalInfoCard({
 
   const cards = appData[sectionName].map((card) => {
     return (
-      <form key={card.id} action='' method='post'>
+      <form className="outline" key={card.id} action='' method='post'>
         <div className='input-group'>
           <label htmlFor='name'>Full Name</label>
           <input
