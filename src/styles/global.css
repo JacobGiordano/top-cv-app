@@ -10,7 +10,7 @@ details[open] summary.outline.secondary::after {
   transform: translateY(-32px);
 }
 
-.delete-btn-wrapper {
+.delete-btn-wrapper, .add-card-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -22,4 +22,16 @@ details[open] summary.outline.secondary::after {
   justify-content: center;
   align-items: center;
   padding: .25rem ;
+}
+
+.outline {
+  border: 1px solid var(--pico-primary);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.input-group.container-fluid { 
+  display: flex;
+  gap: 1rem;
+  padding: 0;
 }
