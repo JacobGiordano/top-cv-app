@@ -44,7 +44,7 @@ function App() {
       <Header>
         <Column classes="column column-row justify-start">
           <Logo />
-          <h1 className="app-title">App name</h1>
+          <h1 className="app-title">ResuMe</h1>
         </Column>
         <Column classes="column column-row justify-end">
           <Button text='Clear' onClick={() => alert("HELLO!")}/>
