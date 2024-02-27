@@ -4,12 +4,51 @@
   width: calc(2550px / 4);
   height: calc(3300px / 4);
   aspect-ratio: 1 / 1.3;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 
+  "column-left column-left column-right column-right column-right column-right";
 }
 
 .preview-wrapper * {
   color: #424242;
+  font-size: .75rem;
 }
 
-.preview-wrapper .column {
+.preview-wrapper h1 {
+  font-size: 2rem;
+}
+
+.preview-wrapper h2 {
+  font-size: 1.5rem;
+}
+
+.preview-wrapper h3 {
+  font-size: 1.25rem;
+  margin-bottom: .75rem;
+}
+
+.preview-wrapper h4 {
+  font-size: 1rem;
+  margin-bottom: .25rem;
+}
+
+.preview-wrapper .container {
   overflow: hidden;
+}
+
+.preview-wrapper .container.column-left {
+  grid-area: column-left;
+}
+
+.preview-wrapper .container.column-right {
+  grid-area: column-right;
+}
+
+.preview-wrapper .section {
+  margin-bottom: 2rem;
+}
+
+.preview-wrapper .experience,
+.preview-wrapper .education {
+  margin-bottom: 1rem;
 }
