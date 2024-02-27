@@ -9,19 +9,21 @@ function Preview({ appData }) {
   const skills = data.skills;
   return (
     <div className='preview-wrapper grid'>
-      <div className='container'>
-        <div className='personal-info'>
+      <div className='container column-left'>
+        <div className='section personal-info-section'>
           <h3>Personal Info</h3>
-          <h4>{personal.name}</h4>
-          <div>{personal.email}</div>
-          <div>{personal.phone}</div>
-          <div>{personal.location}</div>
+          <div className="personal-info">
+            <h4>{personal.name}</h4>
+            <div>{personal.email}</div>
+            <div>{personal.phone}</div>
+            <div>{personal.location}</div>
+          </div>
         </div>
-        <div className='education'>
+        <div className='section education-section'>
           <h3>Education</h3>
           {education.map((exp) => {
             return (
-              <div key={uuidv4()}>
+              <div className="education" key={uuidv4()}>
                 <h4>{exp.name}</h4>
                 <div>{exp.degree_certification}</div>
                 <div>{exp.area_of_focus}</div>
@@ -32,23 +34,23 @@ function Preview({ appData }) {
             );
           })}
         </div>
-        <div className='skills'>
+        <div className='section skills-section'>
           <h3>Skills</h3>
           {skills.map((skillObj) => {
             return (
-              <div key={uuidv4()}>
+              <div className="skill" key={uuidv4()}>
                 <div>{skillObj.skill}</div>
               </div>
             );
           })}
         </div>
       </div>
-      <div className='container'>
-        <div className='experience'>
+      <div className='container column-right'>
+        <div className='section experience-section'>
           <h3>Experience</h3>
           {experience.map((exp) => {
             return (
-              <div key={uuidv4()}>
+              <div className="experience" key={uuidv4()}>
                 <h4>{exp.name}</h4>
                 <div>{exp.position}</div>
                 <div>{exp.description}</div>

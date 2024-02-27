@@ -7,7 +7,25 @@
   left: 0;
   z-index: 20;
 }
+
 .header h1.app-title {
   display: inline-block;
   margin: 0;
+  line-height: 1;
+}
+
+.header .logo-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+
+}
+
+.header .logo-wrapper svg {
+  display: block;
+  width: 100%;
+  max-width: 2.75rem;
+  height: auto;
+  fill: var(--pico-primary);
 }

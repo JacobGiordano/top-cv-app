@@ -7,7 +7,7 @@ import Column from "./Column";
 import Header from "./Header";
 import Main from "./Main";
 import Button from "./Button";
-import Logo from "./Logo";
+import Logo from "./icons/Logo.jsx";
 import Preview from "./Preview/Preview.jsx";
 import { useState } from "react";
 
