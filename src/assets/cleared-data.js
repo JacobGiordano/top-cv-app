@@ -5,6 +5,7 @@ const clearedData = {
     {
       id: uuidv4(),
       name: "",
+      title: "",
       email: "",
       phone: "",
       location: "",
