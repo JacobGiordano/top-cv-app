@@ -9,11 +9,13 @@ function Preview({ appData }) {
   const skills = data.skills;
   return (
     <div className='preview-wrapper grid'>
+      <div className="container preview-header">
+        <h2>{personal.name}</h2>
+        <div className="something-else">{personal.title}</div>
+      </div>
       <div className='container column-left'>
         <div className='section personal-info-section'>
-          <h3>Personal Info</h3>
           <div className="personal-info">
-            <h4>{personal.name}</h4>
             <div>{personal.email}</div>
             <div>{personal.phone}</div>
             <div>{personal.location}</div>
@@ -23,7 +25,7 @@ function Preview({ appData }) {
           <h3>Education</h3>
           {education.map((exp) => {
             return (
-              <div className="education" key={uuidv4()}>
+              <div className="card education" key={uuidv4()}>
                 <h4>{exp.name}</h4>
                 <div>{exp.degree_certification}</div>
                 <div>{exp.area_of_focus}</div>
@@ -38,7 +40,7 @@ function Preview({ appData }) {
           <h3>Skills</h3>
           {skills.map((skillObj) => {
             return (
-              <div className="skill" key={uuidv4()}>
+              <div className="card skill" key={uuidv4()}>
                 <div>{skillObj.skill}</div>
               </div>
             );
@@ -50,7 +52,7 @@ function Preview({ appData }) {
           <h3>Experience</h3>
           {experience.map((exp) => {
             return (
-              <div className="experience" key={uuidv4()}>
+              <div className="card experience" key={uuidv4()}>
                 <h4>{exp.name}</h4>
                 <div>{exp.position}</div>
                 <div>{exp.description}</div>

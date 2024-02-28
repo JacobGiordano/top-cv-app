@@ -21,10 +21,10 @@
 
 .column-left {
   grid-area: column-left;
-  padding: 1rem;
+  padding: 1rem 1rem;
 }
 
 .column-right {
   grid-area: column-right;
-  padding: 1rem;
+  padding: 1rem 1rem;
 }

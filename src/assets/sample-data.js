@@ -5,6 +5,7 @@ const sampleData = {
     {
       id: uuidv4(),
       name: "John Doe",
+      title: "Sr. Technical Lead",
       email: "johndoe@email.com",
       phone: "555-555-5555",
       location: "Anywhere and everywhere",
