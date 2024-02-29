@@ -11,7 +11,7 @@ function Preview({ appData }) {
     <div className='preview-wrapper grid'>
       <div className="container preview-header">
         <h2>{personal.name}</h2>
-        <div className="something-else">{personal.title}</div>
+        <h3 className="personal-title">{personal.title}</h3>
       </div>
       <div className='container column-left'>
         <div className='section personal-info-section'>
@@ -38,13 +38,15 @@ function Preview({ appData }) {
         </div>
         <div className='section skills-section'>
           <h3>Skills</h3>
+          <ul className="skills-list">
           {skills.map((skillObj) => {
             return (
-              <div className="card skill" key={uuidv4()}>
-                <div>{skillObj.skill}</div>
-              </div>
+              <li className="card skill" key={uuidv4()}>
+                <span>{skillObj.skill}</span>
+              </li>
             );
           })}
+          </ul>
         </div>
       </div>
       <div className='container column-right'>
