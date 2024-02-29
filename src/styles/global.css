@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+}
+
 summary > h2 { 
   margin-bottom: 0;
 }
