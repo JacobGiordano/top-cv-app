@@ -14,56 +14,29 @@ const clearedData = {
   experience: [
     {
       id: uuidv4(),
-      name: "",
+      name: "New experience",
       position: "",
       description: "",
       start_date: "",
       end_date: "",
       location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      position: "",
-      description: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      position: "",
-      description: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
+    }
   ],
   education: [
     {
       id: uuidv4(),
-      name: "",
+      name: "New education",
       degree_certification: "",
       area_of_focus: "",
       start_date: "",
       end_date: "",
       location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      degree_certification: "",
-      area_of_focus: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
+    }
   ],
   skills: [
     {
       id: uuidv4(),
-      skill: "",
+      skill: "New skill",
     },
   ],
 };

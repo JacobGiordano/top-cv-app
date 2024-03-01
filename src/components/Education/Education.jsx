@@ -35,7 +35,7 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
         <form className="outline" action='' method='post'>
           <div className='input-group'>
             <div className='grid'>
-              <label htmlFor={`name_${card.id}`}>Education Name</label>
+              <label htmlFor={`name_${card.id}`}>Education name</label>
               <div className='delete-btn-wrapper'>
                 <Button
                   text='Delete'
