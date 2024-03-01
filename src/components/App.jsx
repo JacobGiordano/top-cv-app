@@ -2,6 +2,7 @@ import "../styles/App.css";
 import "../styles/global.css";
 
 import sampleData from "../assets/sample-data.js";
+import clearedData from "../assets/cleared-data.js";
 
 import Column from "./Column";
 import Header from "./Header";
@@ -39,6 +40,14 @@ function App() {
     setAppData({ ...appData, [section]: newSectionData });
   }
 
+  const clearData = () => {
+    setAppData(clearedData);
+  }
+  
+  const useSampleData = () => {
+    setAppData(sampleData);
+  }
+
   return (
     <div className="app">
       <Header>
@@ -47,12 +56,12 @@ function App() {
           <h1 className="app-title">ResuMe</h1>
         </Column>
         <Column classes="column column-row justify-end">
-          <Button text='Clear' onClick={() => alert("HELLO!")}/>
-          <Button text='Load Example' />
+          <Button text='Clear' onClick={clearData}/>
+          <Button text='Load Example' onClick={useSampleData} />
         </Column>
       </Header>
       <Main>
-        <Column classes="column column-left">
+        <Column classes="inputs column column-left  overflow-auto">
           <PersonalInfo
             appData={appData}
             updateData={updateData}
@@ -80,7 +89,7 @@ function App() {
             sectionName='skills'
           />
         </Column>
-        <Column classes="column column-right">
+        <Column classes="preview column column-right">
           <Preview appData={appData} />
         </Column>
       </Main>

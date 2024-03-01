@@ -35,7 +35,7 @@ function Experience({ appData, updateData, addData, removeData, sectionName }) {
         <form className="outline" action='' method='post'>
           <div className='input-group'>
             <div className='grid'>
-              <label htmlFor={`name_${card.id}`}>Experience Name</label>
+              <label htmlFor={`name_${card.id}`}>Experience name</label>
               <div className='delete-btn-wrapper'>
                 <Button
                   text='Delete'
