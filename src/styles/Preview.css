@@ -1,20 +1,39 @@
+:root {
+  --font-size: 24px;
+}
+
 .preview-wrapper {
+  position: relative;
+  background: #ffffff;
   padding: 1rem 1rem 2.5rem 1rem;
-  min-width: calc(2550px / 4.5);
   max-width: calc(2550px / 4.5);
+  min-width: calc(2550px / 4.5);
   min-height: calc(3300px / 4.5);
-  max-height: calc(3300px / 4.5);
   column-gap: 1rem;
   grid-template-rows: max-content;
   grid-template-areas: 
   "preview-header preview-header preview-header preview-header preview-header preview-header"
   "column-left column-left column-right column-right column-right column-right";
+  margin: 0 auto;
+}
+
+.preview-wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  width: calc(2550px / 4.5);
+  height: calc((3300px / 4.5) - 1rem);
+  border-bottom: 1px dashed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
 }
 
 .preview-wrapper * {
   color: #424242;
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
-  font-size: 0.75rem;
+  font-size: calc(var(--font-size) * .6);
 }
 
 .preview-wrapper h1,
@@ -31,23 +50,23 @@
 }
 
 .preview-wrapper h2 {
-  font-size: 2rem;
+  font-size: calc(var(--font-size) * 1.125);
   margin-bottom: .25rem;
 }
 
 .preview-wrapper h3 {
   color: var(--pico-primary);
-  font-size: 1rem;
+  font-size: calc(var(--font-size) * .65);
   margin-bottom: 0.5rem;
 }
 
 .preview-wrapper h4 {
-  font-size: 1rem;
+  font-size: calc(var(--font-size) * .6);
   margin-bottom: 0.125rem;
 }
 
 .preview-header h3.personal-title {
-  font-size: 1.125rem;
+  font-size: calc(var(--font-size) * .7);
 }
 
 .preview-wrapper .preview-header {

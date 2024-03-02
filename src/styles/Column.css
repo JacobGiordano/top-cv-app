@@ -28,11 +28,3 @@
   grid-area: column-right;
   padding: 1rem 1rem;
 }
-
-.main > .column-right {
-  position: absolute;
-}
-
-.column.preview {
-  background: #ffffff;
-}

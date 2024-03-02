@@ -1,7 +1,6 @@
 .main {
-  padding-top: 1rem;
   position: relative;
-  height: 100%;
+  height: 100vh;
 }
 
 .main.grid {
@@ -13,6 +12,6 @@
   .main.grid {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "column-left column-left column-right column-right column-right";
-    top: 4.5rem;
+    top: 4rem;
   }
 }
