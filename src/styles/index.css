@@ -1,9 +1,14 @@
-html, body, #root, .app {
+html,
+body {
   display: block;
   position: relative;
-  height: 100%;
+  overflow: auto;
 }
 
-html, body {
-  overflow: auto;
+body {
+  height: 100vh;
+}
+
+#root {
+  padding: 0;
 }

@@ -36,7 +36,7 @@ function Preview({ appData }) {
             );
           })}
         </div>
-        <div className='section skills-section'>
+        {appData["skills"].length >=1 && <div className='section skills-section'>
           <h3>Skills</h3>
           <ul className="skills-list">
           {skills.map((skillObj) => {
@@ -47,7 +47,7 @@ function Preview({ appData }) {
             );
           })}
           </ul>
-        </div>
+        </div>}
       </div>
       <div className='container column-right'>
         <div className='section experience-section'>
