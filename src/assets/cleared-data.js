@@ -14,7 +14,7 @@ const clearedData = {
   experience: [
     {
       id: uuidv4(),
-      name: "New experience",
+      name: "",
       position: "",
       description: "",
       start_date: "",
@@ -25,7 +25,7 @@ const clearedData = {
   education: [
     {
       id: uuidv4(),
-      name: "New education",
+      name: "",
       degree_certification: "",
       area_of_focus: "",
       start_date: "",
@@ -36,7 +36,7 @@ const clearedData = {
   skills: [
     {
       id: uuidv4(),
-      skill: "New skill",
+      skill: "",
     },
   ],
 };
