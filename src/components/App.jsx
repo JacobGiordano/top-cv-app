@@ -56,7 +56,7 @@ function App() {
           <h1 className="app-title">ResuMe</h1>
         </Column>
         <Column classes="column column-row justify-end">
-          <Button text='Clear' onClick={clearData}/>
+          <Button text='Reset' onClick={clearData}/>
           <Button text='Load Example' onClick={useSampleData} />
         </Column>
       </Header>
