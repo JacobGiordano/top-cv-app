@@ -17,21 +17,6 @@
   margin: 0 auto 4rem;
 }
 
-@media screen {
-  .preview-wrapper::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    width: calc(2550px / 4.5);
-    height: calc((3300px / 4.5) - 1rem);
-    border-bottom: 1px dashed;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-  }
-}
-
 .preview-wrapper * {
   color: #424242;
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
