@@ -38,30 +38,30 @@ function App() {
       return card.id !== cardId ? card : null;
     });
     setAppData({ ...appData, [section]: newSectionData });
-  }
+  };
 
   const clearData = () => {
     setAppData(clearedData);
-  }
-  
+  };
+
   const useSampleData = () => {
     setAppData(sampleData);
-  }
+  };
 
   return (
-    <div className="app">
+    <div className='app overflow-auto'>
       <Header>
-        <Column classes="column column-row justify-start">
+        <Column classes='column column-row justify-start'>
           <Logo />
-          <h1 className="app-title">ResuMe</h1>
+          <h1 className='app-title'>ResuMe</h1>
         </Column>
-        <Column classes="column column-row justify-end">
-          <Button text='Reset' onClick={clearData}/>
+        <Column classes='column column-row justify-end'>
+          <Button text='Reset' onClick={clearData} />
           <Button text='Load Example' onClick={useSampleData} />
         </Column>
       </Header>
       <Main>
-        <Column classes="inputs column column-left  overflow-auto">
+        <Column classes='inputs column column-left overflow-auto'>
           <PersonalInfo
             appData={appData}
             updateData={updateData}
@@ -89,7 +89,7 @@ function App() {
             sectionName='skills'
           />
         </Column>
-        <Column classes="preview column column-right">
+        <Column classes='preview column column-right overflow-auto'>
           <Preview appData={appData} />
         </Column>
       </Main>

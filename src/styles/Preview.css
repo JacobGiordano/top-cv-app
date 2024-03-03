@@ -14,20 +14,22 @@
   grid-template-areas: 
   "preview-header preview-header preview-header preview-header preview-header preview-header"
   "column-left column-left column-right column-right column-right column-right";
-  margin: 0 auto;
+  margin: 0 auto 4rem;
 }
 
-.preview-wrapper::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  width: calc(2550px / 4.5);
-  height: calc((3300px / 4.5) - 1rem);
-  border-bottom: 1px dashed;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
+@media screen {
+  .preview-wrapper::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    width: calc(2550px / 4.5);
+    height: calc((3300px / 4.5) - 1rem);
+    border-bottom: 1px dashed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 }
 
 .preview-wrapper * {
@@ -101,7 +103,7 @@
 }
 
 .preview-wrapper .personal-info-section .personal-info * {
-  font-size: .8125rem;
+  font-size: calc(var(--font-size) * .625);
   margin-bottom: .25rem;
 }
 

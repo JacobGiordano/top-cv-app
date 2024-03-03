@@ -28,3 +28,7 @@
   grid-area: column-right;
   padding: 1rem 1rem;
 }
+
+.main > .column-left {
+  padding-bottom: 4rem;
+}
