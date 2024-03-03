@@ -1,6 +1,10 @@
 .main {
-  position: relative;
+  position: fixed;
   height: 100vh;
+  left: 50%;
+  width: 100%;
+  max-width: 1300px;
+  transform: translateX(-50%);
 }
 
 .main.grid {
