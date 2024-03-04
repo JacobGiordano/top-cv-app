@@ -1,21 +1,23 @@
-import "../styles/App.css";
-import "../styles/global.css";
-
-import sampleData from "../assets/sample-data.js";
-import clearedData from "../assets/cleared-data.js";
-
+import { useState, useRef } from "react";
 import Column from "./Column";
 import Header from "./Header";
 import Main from "./Main";
 import Button from "./Button";
 import Logo from "./icons/Logo.jsx";
 import Preview from "./Preview/Preview.jsx";
-import { useState } from "react";
+
+import { useReactToPrint } from 'react-to-print';
 
 import PersonalInfo from "./Personal/PersonalInfo.jsx";
 import Experience from "./Experience/Experience.jsx";
 import Education from "./Education/Education.jsx";
 import Skills from "./Skills/Skills.jsx";
+
+import "../styles/App.css";
+import "../styles/global.css";
+
+import sampleData from "../assets/sample-data.js";
+import clearedData from "../assets/cleared-data.js";
 
 function App() {
   const [appData, setAppData] = useState(sampleData);
@@ -48,6 +50,9 @@ function App() {
     setAppData(sampleData);
   };
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({ content: () => componentRef.current})
+
   return (
     <div className='app overflow-auto'>
       <Header>
@@ -58,6 +63,7 @@ function App() {
         <Column classes='column column-row justify-end'>
           <Button text='Reset' onClick={clearData} />
           <Button text='Load Example' onClick={useSampleData} />
+          <Button text='Print' onClick={handlePrint} />
         </Column>
       </Header>
       <Main>
@@ -90,7 +96,7 @@ function App() {
           />
         </Column>
         <Column classes='preview column column-right overflow-auto'>
-          <Preview appData={appData} />
+          <Preview appData={appData} reference={componentRef} />
         </Column>
       </Main>
     </div>
