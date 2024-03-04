@@ -1,0 +1,47 @@
+summary > h2 { 
+  margin-bottom: 0;
+}
+
+details summary.outline.secondary::after {
+  transform: translateY(-32px) rotate(-90deg);
+}
+
+details[open] summary.outline.secondary::after {
+  transform: translateY(-32px);
+}
+
+.delete-btn-wrapper, .add-card-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.delete-btn-wrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .25rem ;
+}
+
+.add-card-wrapper {
+  margin-top: 1rem;
+}
+
+.add-card {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.outline {
+  border: 1px solid var(--pico-primary);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.input-group.container-fluid { 
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}

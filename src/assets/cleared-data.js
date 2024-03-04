@@ -5,6 +5,7 @@ const clearedData = {
     {
       id: uuidv4(),
       name: "",
+      title: "",
       email: "",
       phone: "",
       location: "",
@@ -19,25 +20,7 @@ const clearedData = {
       start_date: "",
       end_date: "",
       location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      position: "",
-      description: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      position: "",
-      description: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
+    }
   ],
   education: [
     {
@@ -48,16 +31,7 @@ const clearedData = {
       start_date: "",
       end_date: "",
       location: "",
-    },
-    {
-      id: uuidv4(),
-      name: "",
-      degree_certification: "",
-      area_of_focus: "",
-      start_date: "",
-      end_date: "",
-      location: "",
-    },
+    }
   ],
   skills: [
     {

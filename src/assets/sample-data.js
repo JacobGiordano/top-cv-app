@@ -4,10 +4,11 @@ const sampleData = {
   personal: [
     {
       id: uuidv4(),
-      name: "John Doe",
-      email: "johndoe@email.com",
-      phone: "555-555-5555",
-      location: "Anywhere and everywhere",
+      name: "J. Doe",
+      title: "Sr. Technical Lead",
+      email: "j.doe@email.com",
+      phone: "1-555-555-5555",
+      location: "Sea of Tranquility, The Moon",
     }
   ],
   experience: [

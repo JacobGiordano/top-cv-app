@@ -1,9 +1,9 @@
 import "../styles/Column.css"
 
-function Column({children}) {
+function Column({children, classes}) {
   return (
     <>
-      <div className="column">
+      <div className={classes}>
         {children}
       </div>
     </>

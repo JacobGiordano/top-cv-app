@@ -1,5 +1,34 @@
 .column {
-  border: 1px solid lightgray;
-  padding: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+
+.column-row { 
+  flex-direction: row;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.column-left {
+  grid-area: column-left;
+  padding: 1rem 1rem;
+}
+
+.column-right {
+  grid-area: column-right;
+  padding: 1rem 1rem;
+}
+
+.main > .column-left {
+  padding-bottom: 4rem;
 }

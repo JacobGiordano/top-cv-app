@@ -2,7 +2,7 @@ import "../styles/Header.css"
 
 function Header({children}) {
   return (
-    <header className="header">
+    <header className="header grid">
       {children}
     </header>
   )
