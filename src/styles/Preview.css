@@ -1,0 +1,105 @@
+:root {
+  --font-size: 24px;
+}
+
+.preview-wrapper {
+  position: relative;
+  background: #ffffff;
+  padding: 1rem 1rem 2.5rem 1rem;
+  max-width: calc(2550px / 4.5);
+  min-width: calc(2550px / 4.5);
+  min-height: calc(3300px / 4.5);
+  column-gap: 1rem;
+  grid-template-rows: max-content;
+  grid-template-areas: 
+  "preview-header preview-header preview-header preview-header preview-header preview-header"
+  "column-left column-left column-right column-right column-right column-right";
+  margin: 0 auto 4rem;
+}
+
+.preview-wrapper * {
+  color: #424242;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-size: calc(var(--font-size) * .6);
+}
+
+.preview-wrapper h1,
+.preview-wrapper h2,
+.preview-wrapper h3,
+.preview-wrapper h4,
+.preview-wrapper h5,
+.preview-wrapper h6 {
+  font-weight: 600;
+}
+
+.preview-wrapper h1 {
+  font-size: 2rem;
+}
+
+.preview-wrapper h2 {
+  font-size: calc(var(--font-size) * 1.125);
+  margin-bottom: .25rem;
+}
+
+.preview-wrapper h3 {
+  color: var(--pico-primary);
+  font-size: calc(var(--font-size) * .65);
+  margin-bottom: 0.5rem;
+}
+
+.preview-wrapper h4 {
+  font-size: calc(var(--font-size) * .6);
+  margin-bottom: 0.125rem;
+}
+
+.preview-header h3.personal-title {
+  font-size: calc(var(--font-size) * .7);
+}
+
+.preview-wrapper .preview-header {
+  grid-area: preview-header;
+  border-bottom: 2px solid ;
+}
+
+.preview-wrapper .container.column-left,
+.preview-wrapper .container.column-right {
+  padding: 0;
+}
+
+.preview-wrapper .container.column-left {
+  grid-area: column-left;
+  border-right: 1px solid;
+  padding-right: 1rem;
+}
+
+.preview-wrapper .container.column-right {
+  grid-area: column-right;
+  height: auto;
+}
+
+.preview-wrapper .column-left .section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+}
+
+.preview-wrapper .column-left .section:last-child {
+  border: none;
+}
+
+.preview-wrapper .personal-info-section .personal-info * {
+  font-size: calc(var(--font-size) * .625);
+  margin-bottom: .25rem;
+}
+
+.preview-wrapper .skills-list {
+  padding-left: .75rem;
+}
+
+.preview-wrapper .card {
+  margin-bottom: .75rem;
+}
+
+.preview-wrapper .card:last-child {
+  margin-bottom: 0;
+}

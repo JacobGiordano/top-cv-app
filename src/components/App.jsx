@@ -1,18 +1,21 @@
 import "../styles/App.css";
+import "../styles/global.css";
+
 import sampleData from "../assets/sample-data.js";
+import clearedData from "../assets/cleared-data.js";
 
 import Column from "./Column";
 import Header from "./Header";
 import Main from "./Main";
 import Button from "./Button";
-import Logo from "./Logo";
+import Logo from "./icons/Logo.jsx";
 import Preview from "./Preview/Preview.jsx";
 import { useState } from "react";
 
 import PersonalInfo from "./Personal/PersonalInfo.jsx";
 import Experience from "./Experience/Experience.jsx";
 import Education from "./Education/Education.jsx";
-import Skills from "./Education/Skills.jsx";
+import Skills from "./Skills/Skills.jsx";
 
 function App() {
   const [appData, setAppData] = useState(sampleData);
@@ -35,22 +38,30 @@ function App() {
       return card.id !== cardId ? card : null;
     });
     setAppData({ ...appData, [section]: newSectionData });
-  }
+  };
+
+  const clearData = () => {
+    setAppData(clearedData);
+  };
+
+  const useSampleData = () => {
+    setAppData(sampleData);
+  };
 
   return (
-    <>
+    <div className='app overflow-auto'>
       <Header>
-        <Column>
+        <Column classes='column column-row justify-start'>
           <Logo />
-          <h1>App name</h1>
+          <h1 className='app-title'>ResuMe</h1>
         </Column>
-        <Column>
-          <Button text='Clear' onClick={() => alert("HELLO!")}/>
-          <Button text='Load Example' />
+        <Column classes='column column-row justify-end'>
+          <Button text='Reset' onClick={clearData} />
+          <Button text='Load Example' onClick={useSampleData} />
         </Column>
       </Header>
       <Main>
-        <Column>
+        <Column classes='inputs column column-left overflow-auto'>
           <PersonalInfo
             appData={appData}
             updateData={updateData}
@@ -78,11 +89,11 @@ function App() {
             sectionName='skills'
           />
         </Column>
-        <Column>
+        <Column classes='preview column column-right overflow-auto'>
           <Preview appData={appData} />
         </Column>
       </Main>
-    </>
+    </div>
   );
 }
 

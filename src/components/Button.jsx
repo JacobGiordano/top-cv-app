@@ -1,6 +1,9 @@
-function Button({text, onClick}) {
+import "../styles/Button.css";
+
+function Button({children, classString, text, onClick}) {
+  const classes = classString ? classString : null;
   return (
-    <button onClick={onClick}>{text}</button>
+    <button className={classes} onClick={onClick} title={text}>{children ? children : text}</button>
   )
 }
 export default Button
