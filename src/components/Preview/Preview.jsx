@@ -8,8 +8,8 @@ function Preview({ appData, reference }) {
   const education = data.education;
   const skills = data.skills;
   return (
-    <div className='preview-wrapper grid' ref={reference}>
-      <div className="container preview-header">
+    <div className='preview-wrapper' ref={reference}>
+      <div className="preview-header container-fluid">
         <h2>{personal.name}</h2>
         <h3 className="personal-title">{personal.title}</h3>
       </div>
