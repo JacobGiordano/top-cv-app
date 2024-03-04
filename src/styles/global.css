@@ -28,6 +28,12 @@ details[open] summary.outline.secondary::after {
   margin-top: 1rem;
 }
 
+.add-card {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
 .outline {
   border: 1px solid var(--pico-primary);
   border-radius: 5px;

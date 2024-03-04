@@ -55,7 +55,7 @@ function Skills({ appData, updateData, addData, removeData, sectionName }) {
         <div className='outline'>
           {cards}
           <div className='add-card-wrapper'>
-            <Button text='Add skill' onClick={handleAddData} />
+            <Button classString="add-card" text='+' onClick={handleAddData} />
           </div>
         </div>
       </details>

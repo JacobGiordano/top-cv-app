@@ -192,7 +192,7 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
         </summary>
         {cards}
         <div className="add-card-wrapper">
-          <Button text='Add education' onClick={handleAddData} />
+          <Button classString="add-card"text='+' onClick={handleAddData} />
         </div>
       </details>
     </div>
