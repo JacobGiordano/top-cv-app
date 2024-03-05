@@ -1,15 +1,15 @@
 import { v4 as uuidv4 } from "uuid";
 import "../../styles/Preview.css";
 
-function Preview({ appData }) {
+function Preview({ appData, reference }) {
   const data = appData;
   const personal = data.personal[0];
   const experience = data.experience;
   const education = data.education;
   const skills = data.skills;
   return (
-    <div className='preview-wrapper grid'>
-      <div className="container preview-header">
+    <div className='preview-wrapper' ref={reference}>
+      <div className="preview-header container-fluid">
         <h2>{personal.name}</h2>
         <h3 className="personal-title">{personal.title}</h3>
       </div>
