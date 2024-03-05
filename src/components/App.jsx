@@ -63,7 +63,7 @@ function App() {
         <Column classes='column column-row justify-end'>
           <Button text='Reset' onClick={clearData} />
           <Button text='Load Example' onClick={useSampleData} />
-          <Button text='Print' onClick={handlePrint} />
+          <Button text='Save/Print' onClick={handlePrint} />
         </Column>
       </Header>
       <Main>
