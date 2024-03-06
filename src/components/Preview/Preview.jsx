@@ -23,15 +23,18 @@ function Preview({ appData, reference }) {
         </div>
         <div className='section education-section'>
           <h3>Education</h3>
-          {education.map((exp) => {
+          {education.map((edu) => {
             return (
               <div className="card education" key={uuidv4()}>
-                <h4>{exp.name}</h4>
-                <div>{exp.degree_certification}</div>
-                <div>{exp.area_of_focus}</div>
-                <div>{exp.start_date}</div>
-                <div>{exp.end_date}</div>
-                <div>{exp.location}</div>
+                <h4>{edu.degree_certification}</h4>
+                <div>{edu.name}</div>
+                {edu.area_of_focus && <div>{edu.area_of_focus}</div>}
+                <div className="date-wrapper">                  
+                  <span>{edu.start_date}</span>
+                  <span className="date-separator"> - </span>
+                  <span>{edu.end_date}</span>
+                </div>
+                {edu.location && <div>{edu.location}</div>}
               </div>
             );
           })}
@@ -57,10 +60,13 @@ function Preview({ appData, reference }) {
               <div className="card experience" key={uuidv4()}>
                 <h4>{exp.name}</h4>
                 <div>{exp.position}</div>
+                {exp.location && <span>{exp.location} | </span>}<span className="date-wrapper">                  
+                  <span>{exp.start_date}</span>
+                  <span className="date-separator"> - </span>
+                  <span>{exp.end_date}</span>
+                </span>
                 <div>{exp.description}</div>
-                <div>{exp.start_date}</div>
-                <div>{exp.end_date}</div>
-                <div>{exp.location}</div>
+                
               </div>
             );
           })}

@@ -13,8 +13,8 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
   const handleAddData = () => {
     const newCardObj = {
       id: uuidv4(),
-      name: "New Education",
-      degree_certification: "",
+      degree_certification: "New Education",
+      name: "",
       area_of_focus: "",
       start_date: "",
       end_date: "",
@@ -31,11 +31,13 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
   const cards = appData[sectionName].map((card) => {
     return appData[sectionName].length > 1 ? (
       <details key={card.id}>
-        <summary role='button'>{card.name}</summary>
-        <form className="outline" action='' method='post'>
+        <summary role='button'>{card.degree_certification}</summary>
+        <form className='outline' action='' method='post'>
           <div className='input-group'>
-            <div className='grid'>
-              <label htmlFor={`name_${card.id}`}>Education name</label>
+            <div className='first-input-wrapper'>
+              <label htmlFor={`degree_certification_${card.degree_certification}`}>
+                Degree or Certification
+              </label>
               <div className='delete-btn-wrapper'>
                 <Button
                   text='Delete'
@@ -47,18 +49,6 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
             </div>
             <input
               type='text'
-              id={`name_${card.id}`}
-              name='name'
-              value={card.name}
-              onChange={(e) => handleChange(e, card.id)}
-            />
-          </div>
-          <div className='input-group'>
-            <label htmlFor={`degree_certification_${card.id}`}>
-              Degree or Certificate
-            </label>
-            <input
-              type='text'
               id={`degree_certification_${card.id}`}
               name='degree_certification'
               value={card.degree_certification}
@@ -66,7 +56,19 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
             />
           </div>
           <div className='input-group'>
-            <label htmlFor={`area_of_focus_${card.id}`}>Area of Focus</label>
+            <label htmlFor={`name_${card.name}`}>
+              Education name
+            </label>
+            <input
+              type='text'
+              id={`name_${card.id}`}
+              name='name'
+              value={card.name}
+              onChange={(e) => handleChange(e, card.id)}
+            />
+          </div>
+          <div className='input-group'>
+            <label htmlFor={`area_of_focus_${card.id}`}>Area of Focus (optional)</label>
             <textarea
               type='text'
               id={`area_of_focus_${card.id}`}
@@ -108,7 +110,7 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
         </form>
       </details>
     ) : (
-      <form className="outline" key={card.id} action='' method='post'>
+      <form className='outline' key={card.id} action='' method='post'>
         <div className='input-group'>
           <div className='grid'>
             <label htmlFor={`name_${card.id}`}>Name</label>
@@ -191,8 +193,8 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
           <h2>Education</h2>
         </summary>
         {cards}
-        <div className="add-card-wrapper">
-          <Button classString="add-card"text='+' onClick={handleAddData} />
+        <div className='add-card-wrapper'>
+          <Button classString='add-card' text='+' onClick={handleAddData} />
         </div>
       </details>
     </div>
