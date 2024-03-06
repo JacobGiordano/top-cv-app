@@ -10,6 +10,15 @@ details[open] summary.outline.secondary::after {
   transform: translateY(-32px);
 }
 
+.first-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-input-wrapper label {
+  display: inline-block;
+}
+
 .delete-btn-wrapper, .add-card-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -24,7 +33,12 @@ details[open] summary.outline.secondary::after {
   padding: .25rem ;
 }
 
+.delete-btn-wrapper {
+  display: inline-flex;
+}
+
 .add-card-wrapper {
+  display: flex;
   margin-top: 1rem;
 }
 

@@ -14,8 +14,8 @@ const sampleData = {
   experience: [
     {
       id: uuidv4(),
-      name: "Job",
-      position: "Person",
+      name: "Company/Project",
+      position: "Position held",
       description: "Did something",
       start_date: "Jan 1, 20xx",
       end_date: "Dec 31, 20xx",
@@ -23,8 +23,8 @@ const sampleData = {
     },
     {
       id: uuidv4(),
-      name: "Job 2",
-      position: "Person 2",
+      name: "Company/Project 2",
+      position: "Position held 2",
       description: "Did something 2",
       start_date: "Jan 1, 20xx 2",
       end_date: "Dec 31, 20xx 2",
@@ -46,8 +46,8 @@ const sampleData = {
       name: "School",
       degree_certification: "Certificate",
       area_of_focus: "Something cool",
-      start_date: "Jan 1, 20xx",
-      end_date: "Dec 31, 20xx",
+      start_date: "20xx",
+      end_date: "20xx",
       location: "Someplace",
     },
     {
@@ -55,8 +55,8 @@ const sampleData = {
       name: "School 2",
       degree_certification: "Certificate 2",
       area_of_focus: "Something cool 2",
-      start_date: "Jan 1, 20xx 2",
-      end_date: "Dec 31, 20xx 2",
+      start_date: "20xx 2",
+      end_date: "20xx 2",
       location: "Someplace 2",
     },
   ],
