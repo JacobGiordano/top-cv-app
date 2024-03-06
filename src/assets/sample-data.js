@@ -9,6 +9,7 @@ const sampleData = {
       email: "j.doe@email.com",
       phone: "1-555-555-5555",
       location: "Sea of Tranquility, The Moon",
+      website: "https://github.com/forrealdoe"
     }
   ],
   experience: [

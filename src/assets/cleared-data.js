@@ -9,6 +9,7 @@ const clearedData = {
       email: "",
       phone: "",
       location: "",
+      website: ""
     }
   ],
   experience: [
