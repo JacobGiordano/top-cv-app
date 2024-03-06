@@ -11,7 +11,7 @@ function Preview({ appData, reference }) {
     <div className='preview-wrapper' ref={reference}>
       <div className="preview-header container-fluid">
         <h2>{personal.name}</h2>
-        <h3 className="personal-title">{personal.title}</h3>
+        {personal.title && <h3 className="personal-title">{personal.title}</h3>}
       </div>
       <div className='container column-left'>
         <div className='section personal-info-section'>
@@ -19,6 +19,7 @@ function Preview({ appData, reference }) {
             <div>{personal.email}</div>
             <div>{personal.phone}</div>
             {personal.location && <div>{personal.location}</div>}
+            {personal.website && <div>{personal.website}</div>}
           </div>
         </div>
         <div className='section education-section'>

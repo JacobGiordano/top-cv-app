@@ -26,6 +26,16 @@ function PersonalInfoCard({
           />
         </div>
         <div className='input-group'>
+          <label htmlFor='name'>Title</label>
+          <input
+            type='text'
+            id='title'
+            name='title'
+            value={card.title}
+            onChange={(e) => handleChange(e, card.id)}
+          />
+        </div>
+        <div className='input-group'>
           <label htmlFor='email'>Email</label>
           <input
             type='email'
@@ -52,6 +62,16 @@ function PersonalInfoCard({
             id='location'
             name='location'
             value={card.location}
+            onChange={(e) => handleChange(e, card.id)}
+          />
+        </div>
+        <div className='input-group'>
+          <label htmlFor='location'>Website</label>
+          <input
+            type='text'
+            id='website'
+            name='website'
+            value={card.website}
             onChange={(e) => handleChange(e, card.id)}
           />
         </div>
