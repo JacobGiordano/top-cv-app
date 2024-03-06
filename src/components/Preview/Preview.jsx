@@ -18,7 +18,7 @@ function Preview({ appData, reference }) {
           <div className="personal-info">
             <div>{personal.email}</div>
             <div>{personal.phone}</div>
-            <div>{personal.location}</div>
+            {personal.location && <div>{personal.location}</div>}
           </div>
         </div>
         <div className='section education-section'>
