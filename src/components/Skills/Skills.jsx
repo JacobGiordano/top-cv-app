@@ -2,7 +2,7 @@ import Button from "../Button";
 import TrashCan from "../icons/TrashCan";
 import { v4 as uuidv4 } from "uuid";
 
-function Skills({ appData, updateData, addData, removeData, sectionName }) {
+function Skills({ appData, updateData, addData, removeData, sectionName, preventSubmission }) {
   const handleChange = (e, cardId) => {
     const formData = new FormData(e.target.closest("form"));
     formData.set("id", cardId);
@@ -25,23 +25,23 @@ function Skills({ appData, updateData, addData, removeData, sectionName }) {
 
   const cards = appData[sectionName].map((card) => {
     return (
-      <form key={card.id} action='' method='post'>
+      <form key={card.id} action='' method='post' onKeyDown={e => preventSubmission(e)}>
         <div className='input-group container-fluid'>
-            <input
-              type='text'
-              id={`skill_${card.id}`}
-              name='skill'
-              value={card.skill}
-              onChange={(e) => handleChange(e, card.id)}
-            />
-            <div className='delete-btn-wrapper'>
-              <Button
-                text='Delete'
-                onClick={(e) => handleRemoveData(e, sectionName, card.id)}
-              >
-                <TrashCan />
-              </Button>
-            </div>
+          <input
+            type='text'
+            id={`skill_${card.id}`}
+            name='skill'
+            value={card.skill}
+            onChange={(e) => handleChange(e, card.id)}
+          />
+          <div className='delete-btn-wrapper'>
+            <Button
+              text='Delete'
+              onClick={(e) => handleRemoveData(e, sectionName, card.id)}
+            >
+              <TrashCan />
+            </Button>
+          </div>
         </div>
       </form>
     );
@@ -55,7 +55,7 @@ function Skills({ appData, updateData, addData, removeData, sectionName }) {
         <div className='outline'>
           {cards}
           <div className='add-card-wrapper'>
-            <Button classString="add-card" text='+' onClick={handleAddData} />
+            <Button classString='add-card' text='+' onClick={handleAddData} />
           </div>
         </div>
       </details>

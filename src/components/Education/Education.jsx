@@ -2,7 +2,7 @@ import Button from "../Button";
 import { v4 as uuidv4 } from "uuid";
 import TrashCan from "../icons/TrashCan";
 
-function Education({ appData, updateData, addData, removeData, sectionName }) {
+function Education({ appData, updateData, addData, removeData, sectionName, preventSubmission }) {
   const handleChange = (e, cardId) => {
     const formData = new FormData(e.target.closest("form"));
     formData.set("id", cardId);
@@ -32,7 +32,7 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
     return appData[sectionName].length > 1 ? (
       <details key={card.id}>
         <summary role='button'>{card.degree_certification}</summary>
-        <form className='outline' action='' method='post'>
+        <form className='outline' action='' method='post' onKeyDown={e => preventSubmission(e)}>
           <div className='input-group'>
             <div className='first-input-wrapper'>
               <label htmlFor={`degree_certification_${card.degree_certification}`}>
@@ -110,7 +110,7 @@ function Education({ appData, updateData, addData, removeData, sectionName }) {
         </form>
       </details>
     ) : (
-      <form className='outline' key={card.id} action='' method='post'>
+      <form className='outline' key={card.id} action='' method='post' onKeyDown={e => preventSubmission(e)}>
         <div className='input-group'>
           <div className='grid'>
             <label htmlFor={`name_${card.id}`}>Name</label>
