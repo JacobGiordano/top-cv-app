@@ -50,6 +50,10 @@ function App() {
     setAppData(sampleData);
   };
 
+  const preventSubmission = (e) => {
+    e.key === 'Enter' && e.preventDefault();
+  }
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({ content: () => componentRef.current})
 
@@ -79,6 +83,7 @@ function App() {
             addData={addData}
             removeData={removeData}
             sectionName='experience'
+            preventSubmission={preventSubmission}
           />
           <Education
             appData={appData}
@@ -86,6 +91,7 @@ function App() {
             addData={addData}
             removeData={removeData}
             sectionName='education'
+            preventSubmission={preventSubmission}
           />
           <Skills
             appData={appData}
@@ -93,6 +99,7 @@ function App() {
             addData={addData}
             removeData={removeData}
             sectionName='skills'
+            preventSubmission={preventSubmission}
           />
         </Column>
         <Column classes='preview column column-right overflow-auto'>
